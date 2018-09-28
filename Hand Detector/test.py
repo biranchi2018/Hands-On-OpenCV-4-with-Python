@@ -1,3 +1,10 @@
+'''
+
+Air Writing - Translating hand gestures to on-screen handwriting
+
+'''
+
+
 from hand_recognition import *
 import cv2
 import numpy as np
