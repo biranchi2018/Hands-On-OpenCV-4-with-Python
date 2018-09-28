@@ -1,6 +1,6 @@
 '''
 
-Air Writing - Translating hand gestures to on-screen handwriting
+Air Writing - Translating gestures to on-screen handwriting
 
 '''
 
