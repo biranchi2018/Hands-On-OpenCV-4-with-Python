@@ -18,11 +18,18 @@ if len(sys.argv) != 2:
 data_file = sys.argv[1]
 file_type = None
 
-if data_file.split(".")[1] in ["png", "jpg", "jpeg", "tiff"]:
-    file_type = "image"
+if len(data_file.split(".")) > 1:
 
-if data_file.split(".")[1] in ["mov", "avi", "mp4", "mkv"]:
-    file_type = "video"
+	if data_file.split(".")[1] in ["png", "jpg", "jpeg", "tiff"]:
+		file_type = "image"
+
+	if data_file.split(".")[1] in ["mov", "avi", "mp4", "mkv"]:
+		file_type = "video"
+
+else:
+	if data_file.split(".")[0] in ["0"]:
+		data_file = int(data_file.split(".")[0])
+		file_type = "video"
 
 
 # load the caffe model
